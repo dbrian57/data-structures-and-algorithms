@@ -53,7 +53,7 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  return charArray.sort((firstHouse, secondHouse) => (firstHouse.children.length > secondHouse.children.length) ? 1 : -1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,7 +64,8 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+  let testW = /w/.test(str);
+  return testW;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +81,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let testDigit = /\d/.test(input);
+  return testDigit;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +93,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  let testWorld = /world/i.test(input);
+  return testWorld;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +106,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let capitalsArray = [];
+  capitalsArray.push(str.match(/\b[A-Z]([a-z])*\b/));
+  return testCapitals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +118,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
