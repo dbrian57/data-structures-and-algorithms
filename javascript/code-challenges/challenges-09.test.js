@@ -37,6 +37,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
+  obj.test(Object.values(value));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,7 +133,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  arr.forEach(person => {
+    if (person.name === character) {
+      Object.keys(person).forEach((key, idx) => {
+        console.log(key, idx);
+      })
+    }
+  })
+
 
 };
 
